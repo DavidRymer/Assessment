@@ -38,4 +38,42 @@ class ShopTest extends FlatSpec with Matchers {
 
   }
 
+  "This input for the function revenueWithDiscount" should "return 1.10" in {
+
+    assertResult(Shop.revenueWithDiscount(Apple, Apple, Orange, Orange, Orange)){1.10}
+
+  }
+
+  "This input for the function revenueWithDiscount" should "return 1.20" in {
+
+    assertResult(Shop.revenueWithDiscount(Apple, Apple, Apple)){1.20}
+
+  }
+
+  "This input for the function revenueWithDiscount" should "return 0.85" in {
+
+    assertResult(Shop.revenueWithDiscount(Orange, Apple)){0.85}
+
+  }
+
+  "This input for the function revenueWithDiscount" should "return 0.0" in {
+
+    assertResult(Shop.revenueWithDiscount()){0.0}
+
+  }
+
+  "This input for the function revenueWithDiscount" should "return 0.6" in {
+
+    assertResult(Shop.revenueWithDiscount(Apple)){0.6}
+
+  }
+
+  "This input for the function revenueWithDiscount" should "return 0.25" in {
+
+    assertResult(Shop.revenueWithDiscount(Orange)){0.25}
+
+  }
+
+
+
 }
